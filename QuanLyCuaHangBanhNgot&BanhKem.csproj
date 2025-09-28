@@ -50,6 +50,7 @@
     <Compile Include="Domain\MemberCustomer.cs" />
     <Compile Include="Domain\Order.cs" />
     <Compile Include="Domain\OrderLine.cs" />
+    <Compile Include="Domain\Payment.cs" />
     <Compile Include="Domain\WalkInCustomer.cs" />
     <Compile Include="Pricing\DefaultPriceRule.cs" />
     <Compile Include="Pricing\InnerCityShipping.cs" />
@@ -61,6 +62,9 @@
     <Compile Include="Pricing\VATTax.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IEntity.cs" />
+    <Compile Include="Repository\InMemoryInventory.cs" />
+    <Compile Include="Repository\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

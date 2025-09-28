@@ -15,7 +15,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
             {
                 this.Mess = mess;
             } 
-            
+
         }
     }
 }

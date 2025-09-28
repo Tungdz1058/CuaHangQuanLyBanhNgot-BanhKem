@@ -1,0 +1,7 @@
+C:\Users\ASUS\source\repos\QuanLyCuaHangBanhNgot&BanhKem\bin\Debug\QuanLyCuaHangBanhNgot&BanhKem.exe.config
+C:\Users\ASUS\source\repos\QuanLyCuaHangBanhNgot&BanhKem\bin\Debug\QuanLyCuaHangBanhNgot&BanhKem.exe
+C:\Users\ASUS\source\repos\QuanLyCuaHangBanhNgot&BanhKem\bin\Debug\QuanLyCuaHangBanhNgot&BanhKem.pdb
+C:\Users\ASUS\source\repos\QuanLyCuaHangBanhNgot&BanhKem\obj\Debug\QuanLyCuaHangBanhNgot&BanhKem.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\QuanLyCuaHangBanhNgot&BanhKem\obj\Debug\QuanLyCuaHangBanhNgot&BanhKem.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\QuanLyCuaHangBanhNgot&BanhKem\obj\Debug\QuanLyCuaHangBanhNgot&BanhKem.exe
+C:\Users\ASUS\source\repos\QuanLyCuaHangBanhNgot&BanhKem\obj\Debug\QuanLyCuaHangBanhNgot&BanhKem.pdb

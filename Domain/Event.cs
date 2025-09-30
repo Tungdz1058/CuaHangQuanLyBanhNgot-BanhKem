@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
 {
-    public class Event : EventArgs
+    public class InventoryLowEventArgs : EventArgs
     {
-        class InventoryLowHandler
-        {
-            public string Mess;
-            public InventoryLowHandler(string mess)
+        public CakeProduct product{ get; private set; }
+            public InventoryLowEventArgs(CakeProduct product)
             {
-                this.Mess = mess;
+            this.product = product;
             } 
 
         }
-    }
 }

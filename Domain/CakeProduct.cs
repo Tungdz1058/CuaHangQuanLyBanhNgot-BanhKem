@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using QuanLyCuaHangBanhNgot_BanhKem.Repository;
+using QuanLyCuaHangBanhNgot_BanhKem.Generic;
 namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
 {
     public class CakeProduct : IEntity<string>
     {
-        public string ProductId { get; private set; }
-        public string Name { get; private set; }
-        public CakeType caketype { get; private set; }
+        public string ProductId { get;set; }
+        public string Name { get; set; }
+        public CakeType caketype { get; set; }
         public decimal UnitPrice { get; private set; }
-        public int StockQty { get; private set; }
+        public int StockQty { get; set; }
         public int ReorderThreshold { get; private set; }
-        public bool IsActive { get; private set; }
-        public bool IsTopping { get; private set; }
+        public bool IsActive { get; set; }
+        public bool IsTopping { get; set; }
 
         public string ID => ProductId;
 
-        public virtual void DeductStock(int qty) { }
+        public virtual void DeductStock(int amount)
+        {
+            this.StockQty -= amount;
+        }
         public virtual bool IsLowStock() => StockQty < ReorderThreshold;
 
     }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyCuaHangBanhNgot_BanhKem.Repository
+namespace QuanLyCuaHangBanhNgot_BanhKem.Generic
 {
     public interface IRepository<T,Tkey>
     {

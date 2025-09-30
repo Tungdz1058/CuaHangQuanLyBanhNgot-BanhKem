@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyCuaHangBanhNgot_BanhKem.Domain;
 
-namespace QuanLyCuaHangBanhNgot_BanhKem.Repository
+namespace QuanLyCuaHangBanhNgot_BanhKem.Generic
 {
     public class InMemoryInventory<T, Tkey> : IRepository<T, Tkey> where T : IEntity<Tkey>
     {

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyCuaHangBanhNgot_BanhKem.Repository
+namespace QuanLyCuaHangBanhNgot_BanhKem.Service
 {
-    public interface IEntity<Tkey>
+    public class OrderService
     {
-        Tkey ID { get; }
+
     }
 }

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyCuaHangBanhNgot_BanhKem.Generic;
 
 namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
 {
-    public abstract class Customer
+    public abstract class Customer : IEntity<string>
     {
         public string CustomerID { get; private set; }
         public string FullName { get; private set; }
@@ -32,6 +33,8 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
                 }
             }
 
+        public string ID => CustomerID;
+
         public Customer(string id, string name, string number)
         {
             this.CustomerID = id;
@@ -41,6 +44,6 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         }
         public abstract decimal GetDiscountPercent();
         public virtual bool CanAccruePoints() => false;
-        public virtual void AddPoints(int pts) { }
+        public virtual void AddPoints(decimal pts) { }
     }
 }

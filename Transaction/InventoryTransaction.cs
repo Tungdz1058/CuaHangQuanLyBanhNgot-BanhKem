@@ -27,13 +27,13 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Transaction
         }
         public void Print()
         {
-            Console.WriteLine("==== INVENTORY TRANSACTION ====");
+            Console.WriteLine("============ INVENTORY TRANSACTION ============");
             Console.WriteLine($"Transaction ID : {TransactionID}");
             Console.WriteLine($"Date           : {date}");
             Console.WriteLine($"Product        : {product.Name} (ID: {product.ProductId})");
             Console.WriteLine($"Change Amount  : {ChangeStockAmount}");
             Console.WriteLine($"Current Stock  : {CurrentStockAmount}");
-            Console.WriteLine("===============================");
+            Console.WriteLine("===============================================");
         }
     }
 }

@@ -65,10 +65,13 @@
     <Compile Include="Generic\IEntity.cs" />
     <Compile Include="Generic\InMemoryInventory.cs" />
     <Compile Include="Generic\IRepository.cs" />
+    <Compile Include="Receipts\DetailReceiptFormatter.cs" />
+    <Compile Include="Receipts\IReceiptFormatter.cs" />
     <Compile Include="Service\InventoryService.cs" />
     <Compile Include="Service\OrderService.cs" />
     <Compile Include="Transaction\InventoryTransaction.cs" />
     <Compile Include="Transaction\ITransaction.cs" />
+    <Compile Include="Transaction\OrderTransaction.cs" />
     <Compile Include="Transaction\TransactionService.cs" />
   </ItemGroup>
   <ItemGroup>

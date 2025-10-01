@@ -16,6 +16,8 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         public int ReorderThreshold { get; private set; }
         public bool IsActive { get; set; }
         public bool IsTopping { get; set; }
+        public CakeSize size { get; private set; }
+        public Topping topping { get; private set; }
 
         public string ID => ProductId;
 

@@ -12,7 +12,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
     {
         public string MemberCode { get; private set; }
         public MemberTier tier { get; private set; }
-        public int Points { get; private set; }
+        public decimal Points { get; private set; }
         public decimal CreditLimit = 500m;
 
         public MemberCustomer(string id, string name, string number, string code, int point, MemberTier tier) : base(id, name, number)
@@ -26,9 +26,9 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         {
             return true;
         }
-        public override void AddPoints(int pts)
+        public override void AddPoints(decimal pts) 
         {
-            
+            this.Points += Math.Round(pts);
         }
         public override decimal GetDiscountPercent()
         {

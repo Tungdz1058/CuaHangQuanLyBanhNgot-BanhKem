@@ -26,17 +26,18 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Receipts
             Console.WriteLine($"Phone                  : {customer.Phone}");
             if (customer is MemberCustomer mcus)
             {
-                Console.WriteLine($"Member Rank            : {mcus.tier}");
-                Console.WriteLine($"Reward Points          : {mcus.Points}");
+            Console.WriteLine($"Member Rank            : {mcus.tier}");
+            Console.WriteLine($"Point Reward           : {mcus.Points - mcus.OldPoints}");
+            Console.WriteLine($"Reward Points          : {mcus.Points}");
             }
 
             if (order.IsShipping)
-                Console.WriteLine($"Shipping Address       : {order.Adress}");
+            Console.WriteLine($"Shipping Address       : {order.Adress}");
             else
-                Console.WriteLine("----         || Walk-in Member ||         ----");
+            Console.WriteLine("----         || Walk-in Member ||         ----");
 
             Console.WriteLine($"Order Date             : {order.OrderDate:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("List of Cakes          :");
+            Console.WriteLine($"List of Cakes          :");
 
             foreach (var line in order.lines)
             {
@@ -50,13 +51,13 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Receipts
 
             if (payment != null)
             {
-                Console.WriteLine("Payment Info:");
-                Console.WriteLine($"   Method              : {payment.method}");
-                Console.WriteLine($"   Date                : {payment.PaidDateAt:dd/MM/yyyy HH:mm}");
+            Console.WriteLine("Payment Info:");
+            Console.WriteLine($"   Method              : {payment.method}");
+            Console.WriteLine($"   Date                : {payment.PaidDateAt:dd/MM/yyyy HH:mm}");
             }
             else
             {
-                Console.WriteLine("Payment                : [Chưa thanh toán]");
+            Console.WriteLine($"Payment                : [Chưa thanh toán]");
             }
 
             Console.WriteLine("==================================================");

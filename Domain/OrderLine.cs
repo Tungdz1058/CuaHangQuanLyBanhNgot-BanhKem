@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using QuanLyCuaHangBanhNgot_BanhKem.Generic;
 using QuanLyCuaHangBanhNgot_BanhKem.Pricing;
@@ -15,13 +16,16 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         public CakeProduct product { get; private set; }
         public CakeSize size { get; private set; }
         public Topping topping { get; private set; }
-        public OrderLine(string Lineid,CakeProduct product, CakeSize size,Topping topping,int quantity)
+        public bool IsReward { get; private set; }
+        public OrderLine(string Lineid, CakeProduct product, CakeSize size, Topping topping, int quantity, bool IsReward)
         {
             this.LineId = Lineid;
             this.product = product;
             this.size = size;
             this.topping = topping;
             this.quantity = quantity;
+            this.IsReward = IsReward;
+            this.unit_price = product.UnitPrice;
         }
         public int quantity
         {
@@ -36,13 +40,13 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
                 quantity = value;
             }
         }
-        public decimal unit_price { get; private set; }
+        public decimal unit_price;
         public decimal line_discount_percent
         {
             get { return line_discount_percent; }
-            private set
+            set
             {
-                if(line_discount_percent < 0m||line_discount_percent > 0.5m)
+                if(!IsReward&&(line_discount_percent < 0m||line_discount_percent > 0.5m))
                 {
                     value = 0;
                     Console.WriteLine("số tiền giảm giá chỉ được trong khoảng [0 - 50%]");

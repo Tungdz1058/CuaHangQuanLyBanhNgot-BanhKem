@@ -28,12 +28,10 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             TransactionService trans = new TransactionService();
             CakeProduct item = inventory.GetById(id);
             if (item == null) {
-                Console.WriteLine("There are no products matching the ID!");
-                return;
+                throw new InvalidOperationException("There are no products matching the ID!!");
             }
             else if (item.StockQty < amount) {
-                Console.WriteLine("Not enough stock!");
-                return;
+                throw new InvalidOperationException("Not enough stock!!");
             }
 
             item.DeductStock(amount);
@@ -48,8 +46,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             CakeProduct item = inventory.GetById(id);
             if (item == null)
             {
-                Console.WriteLine("There are no products matching the ID!");
-                return;
+                throw new InvalidOperationException("There are no products matching the ID!!");
             }
             item.StockQty = amount;
             inventory.Update(id, item);

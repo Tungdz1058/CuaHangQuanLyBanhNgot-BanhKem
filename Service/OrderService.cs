@@ -8,6 +8,7 @@ using QuanLyCuaHangBanhNgot_BanhKem.Domain;
 using QuanLyCuaHangBanhNgot_BanhKem.Pricing;
 using QuanLyCuaHangBanhNgot_BanhKem.Transaction;
 using QuanLyCuaHangBanhNgot_BanhKem.Receipts;
+using QuanLyCuaHangBanhNgot_BanhKem.Promotion_rule;
 
 
 namespace QuanLyCuaHangBanhNgot_BanhKem.Service
@@ -19,22 +20,27 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
         public InMemoryInventory<CakeProduct, string> _repoProduct = new InMemoryInventory<CakeProduct, string>();
         public InMemoryInventory<Payment, string> _repoPayment = new InMemoryInventory<Payment, string>();
         InventoryService InService = new InventoryService();
+        public event EventHandler<CanAccruePoint> AddPoint;
+        public event EventHandler<OrderChangeStatus> _OrderChangeStatus;
         private readonly IPriceRule _pricerule;
         private readonly IOrderDiscountPolicy _OrderDiscount;
         private readonly ITaxCaculators _tax;
         private readonly IShippingFee _shippingfee;
+        private readonly IPromotionRule<Order> _Promotion;
 
-        //private readonly IReceiptFormatter _format;
+        private readonly IReceiptFormatter _format;
 
         public OrderService(IPriceRule pricerule,
                             IOrderDiscountPolicy orderDiscount,
                             ITaxCaculators tax,
+                            IPromotionRule<Order> promotion,
                             IShippingFee shippingfee)
         {
             _pricerule = pricerule;
             _OrderDiscount = orderDiscount;
             _tax = tax;
             _shippingfee = shippingfee;
+            _Promotion = promotion;
         }
         public void CreateOrder(string Customerid, bool IsShipping)
         {
@@ -54,7 +60,9 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             if (order == null) throw new InvalidOperationException("Order not found!!");
             CakeProduct product = _repoProduct.GetById(ProductID);
             if (product == null) throw new InvalidOperationException("Product not found!!");
-            order.AddLine(new OrderLine(Orderid, product, product.size, product.topping,quantity));
+            bool IsReward = (quantity >= 10) ? true : false;
+            order.AddLine(new OrderLine(Orderid, product, product.size, product.topping,quantity,IsReward));
+            _Promotion.ApplyPromotionRule(order);
             _repoOrder.Update(Orderid,order);
         }
         public void Confirmed(string OrderID)
@@ -68,6 +76,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
                 InService.DecreaseStock(line.product.ProductId, line.quantity);
             }
             order.ChangeStatus(OrderStatus.Confirmed);
+            
             _repoOrder.Update(OrderID,order);
         }
         public void Pay(string OrderID,PaymentMethod payment)
@@ -82,7 +91,9 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             TransactionService trans = new TransactionService();
             if (order.customer is MemberCustomer member)
             {
-                member.AddPoints(order.Total / 10m);        
+                member.AddPoints(order.Total / 10m);
+                var handler = AddPoint;
+                handler?.Invoke(this, new CanAccruePoint(Math.Round(order.Total / 10m), member.Points));
             }
             trans.AddTransaction(new OrderTransaction(OrderID, new DetailReceiptFormatter(order, customer, NewPay)));
         }

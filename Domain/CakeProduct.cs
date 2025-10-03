@@ -11,9 +11,9 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         public string ProductId { get;set; }
         public string Name { get; set; }
         public CakeType caketype { get; set; }
-        public decimal UnitPrice { get; private set; }
+        public decimal UnitPrice { get; set; }
         public int StockQty { get; set; }
-        public int ReorderThreshold { get; private set; }
+        public int ReorderThreshold { get; private set; } = 10;
         public bool IsActive { get; set; }
         public bool IsTopping { get; set; }
         public CakeSize size { get; private set; }

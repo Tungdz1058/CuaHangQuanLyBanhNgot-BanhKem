@@ -16,6 +16,16 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
 
     }
 
+    public class CanAccruePoint : EventArgs
+    {
+        public decimal points { get; private set;}
+        public decimal total { get; private set; }
+        public CanAccruePoint(decimal points,decimal total)
+        {
+            this.points = points;
+            this.total = total;
+        }
+    }
     public class OrderChangeStatus : EventArgs
     {
         public Order order { get; private set; }

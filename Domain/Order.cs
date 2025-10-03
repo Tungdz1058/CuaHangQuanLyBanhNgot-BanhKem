@@ -6,11 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyCuaHangBanhNgot_BanhKem.Generic;
 using QuanLyCuaHangBanhNgot_BanhKem.Pricing;
+using QuanLyCuaHangBanhNgot_BanhKem.Service;
 namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
 {
     public class Order : IEntity<string>
     {
         public event EventHandler<OrderChangeStatus> _OrderChangeStatus;
+        public OrderService service { get; private set; }
         public string OrderID { get; private set; }
         public DateTime OrderDate { get; set; }
         public Customer customer { get; private set; }
@@ -24,6 +26,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
 
         public decimal Adress { get; set; }
         public bool IsShipping { get; private set; }
+        
 
         
         public List<OrderLine> lines = new List<OrderLine>();

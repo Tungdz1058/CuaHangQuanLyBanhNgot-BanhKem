@@ -23,35 +23,43 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
             this.product = product;
             this.size = size;
             this.topping = topping;
-            this.quantity = quantity;
+            this.Quantity = quantity;
             this.IsReward = IsReward;
             this.unit_price = product.UnitPrice;
         }
-        public int quantity
+        private int _quantity;
+        public int Quantity
         {
-            get { return quantity; }
+            get => _quantity;
             private set
             {
-                if(quantity < 0)
+                if (value <= 0)
                 {
-                    value = 1;
-                    Console.WriteLine("Số lượng bánh phải lớn hơn 0!!!");
+                    _quantity = 1;
+                    Console.WriteLine("Số lượng bánh phải lớn hơn 0!!! (auto set = 1)");
                 }
-                quantity = value;
+                else
+                {
+                    _quantity = value;
+                }
             }
         }
         public decimal unit_price;
-        public decimal line_discount_percent
+        private decimal _lineDiscountPercent = 0.1m; 
+        public decimal LineDiscountPercent
         {
-            get { return line_discount_percent; }
+            get => _lineDiscountPercent;
             set
             {
-                if(!IsReward&&(line_discount_percent < 0m||line_discount_percent > 0.5m))
+                if (!IsReward && (value < 0m || value > 0.5m))
                 {
-                    value = 0;
-                    Console.WriteLine("số tiền giảm giá chỉ được trong khoảng [0 - 50%]");
+                    _lineDiscountPercent = 0m;
+                    Console.WriteLine("❌ Số tiền giảm giá chỉ được trong khoảng [0 - 50%]");
                 }
-                line_discount_percent = value;
+                else
+                {
+                    _lineDiscountPercent = value;
+                }
             }
         }
         public decimal LineAmount { get; private set; }
@@ -92,7 +100,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
 
         public void ComputeLineAmount()
         {
-            LineAmount = quantity * (GetSizePrice()+((product.IsTopping) ? GetToppingPrice() : 0m)) * (1 - line_discount_percent); 
+            LineAmount = Quantity * (GetSizePrice()+((product.IsTopping) ? GetToppingPrice() : 0m)) * (1 - LineDiscountPercent); 
         }
 
     }

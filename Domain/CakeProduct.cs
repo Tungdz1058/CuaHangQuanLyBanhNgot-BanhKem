@@ -14,7 +14,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         public decimal UnitPrice { get; set; }
         public int StockQty { get; set; }
         public bool IsActive { get; set; }
-        public bool IsTopping { get; set; }
+        public bool IsTopping { get; set; } = true;
         public CakeSize size { get; private set; }
         public Topping topping { get; private set; }
 

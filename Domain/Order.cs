@@ -57,13 +57,15 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
 
         public void AddLine(OrderLine line)
         {
-            if (status == OrderStatus.Draft) throw new InvalidOperationException("Cannot modify lines when not in Draft");
-            else lines.Add(line);
+            if (status != OrderStatus.Draft)
+                throw new InvalidOperationException("Cannot modify lines when not in Draft");
+
+            lines.Add(line);
         }
 
         public void ChangeStatus(OrderStatus newstatus)
         {
-            if (status != newstatus) return;
+            if (status == newstatus) return;
             else
             {
                 var old = status;
@@ -73,7 +75,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         }
         public decimal Recalculate()
         {
-            foreach (var line in lines) { decimal Subtotal = price_rule.LineAmount(line); }
+            foreach (var line in lines) { Subtotal = price_rule.LineAmount(line); }
             OrderLevelDiscount = _orderdiscount.orderdiscountpercent(this);
             VATAmount = _taxCal.VATCal()*Subtotal;
             if (IsShipping) ShippingFee = (Adress > 3m) ? (30m + _shipping.ShippingCompute(Adress - 3m)) : 30m;

@@ -18,14 +18,15 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Promotion_rule
         public void ApplyPromotionRule(Order context)
         {
             if (context == null) throw new InvalidOperationException("Order context not found!!");
-            foreach (var line in order.lines)
+            int len = context.lines.Count;
+            for(int i = 0; i< len;i++)
             {
-                if (line.IsReward)
+                if (order.lines[i].IsReward)
                 {
-                    var newline = new OrderLine(line.LineId, line.product, CakeSize.L,Topping.cheese,1,line.IsReward);
-                    newline.line_discount_percent = 1m;
+                    var newline = new OrderLine(order.lines[i].LineId, order.lines[i].product, CakeSize.L,Topping.cheese,1, order.lines[i].IsReward);
+                    newline.LineDiscountPercent = 1m;
                     order.lines.Add(newline);
-                    Console.WriteLine($"Reward x1 {line.product.Name} - Size : {CakeSize.L} - Topping : {Topping.cheese}");
+                    Console.WriteLine($"Reward x1 {order.lines[i].product.Name} - Size : {CakeSize.L} - Topping : {Topping.cheese}");
                 }
             }
         }

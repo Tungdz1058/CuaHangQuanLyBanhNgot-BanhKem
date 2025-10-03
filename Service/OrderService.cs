@@ -53,8 +53,6 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
         public void CreateOrder(string Customerid, bool IsShipping)
         {
             Console.WriteLine("Customers place orders!!");
-            Customer customer = _repoCustomer.GetById(Customerid);
-            if (customer == null) throw new InvalidOperationException("Customer not found!!");
 
             var NewOrder = new Order(Customerid,OrderStatus.Draft, _pricerule,_shippingfee,_OrderDiscount,_tax,IsShipping);
             NewOrder.OrderDate = DateTime.Now;
@@ -62,16 +60,16 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             
             _repoOrder.Add(NewOrder);
         }
-        public void AddLine(string Orderid,string ProductID,int quantity)
+        public void AddLine(string Orderid,string ProductID,int quantity,CakeSize size,Topping topping)
         {
             Order order = _repoOrder.GetById(Orderid);
             if (order == null) throw new InvalidOperationException("Order not found!!");
             CakeProduct product = _repoProduct.GetById(ProductID);
             if (product == null) throw new InvalidOperationException("Product not found!!");
             bool IsReward = (quantity >= 10) ? true : false;
-            order.AddLine(new OrderLine(Orderid, product, product.size, product.topping,quantity,IsReward));
+            order.AddLine(new OrderLine(Orderid, product, size, topping, quantity, IsReward));
             _Promotion.ApplyPromotionRule(order);
-            _repoOrder.Update(Orderid,order);
+            _repoOrder.Update(Orderid, order);
         }
         public void Confirmed(string OrderID)
         {
@@ -79,9 +77,17 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             if (order == null) throw new InvalidOperationException("Order not found!!");
             if (order.status != OrderStatus.Draft) throw new InvalidOperationException("Only Draft can be Confirmed!!");
 
-            foreach(var line in order.lines)
+            Console.WriteLine("Bạn có muốn xác nhận đơn hàng? (y/n)");
+            string res = Console.ReadLine() ?? "n";
+            if (res == "y")
             {
-                InService.DecreaseStock(line.product.ProductId, line.quantity);
+                Cancelled(OrderID);
+                return;
+            }
+
+            foreach (var line in order.lines)
+            {
+                InService.DecreaseStock(line.product.ProductId, line.Quantity);
             }
             order.ChangeStatus(OrderStatus.Confirmed);
             

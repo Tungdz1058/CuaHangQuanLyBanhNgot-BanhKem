@@ -41,7 +41,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Receipts
 
             foreach (var line in order.lines)
             {
-                Console.WriteLine($"    + {line.product.Name} | Size: {line.size} | Topping: {line.topping} | x{line.quantity}");
+                Console.WriteLine($"    + {line.product.Name} | Size: {line.size} | Topping: {line.topping} | x{line.Quantity}");
             }
 
             Console.WriteLine($"Member Discount        : {order.OrderLevelDiscount} VND");

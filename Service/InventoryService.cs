@@ -13,20 +13,29 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
     
     public class InventoryService
     {
-        InMemoryInventory<CakeProduct, string> inventory = new InMemoryInventory<CakeProduct, string>();
-        public event EventHandler<InventoryLowEventArgs> Islow; 
+        private readonly IRepository<CakeProduct, string> _productRepo;
+        public event EventHandler<InventoryLowEventArgs> Islow;
+        public int ReorderThreshold { get; private set; }
+        public InventoryService(IRepository<CakeProduct,string> repo,int ReorderThreshold)
+        {
+            this._productRepo = repo;
+            this.ReorderThreshold = ReorderThreshold;
+        }
         public void CheckStock(string id)
         {
-            CakeProduct item = inventory.GetById(id);
+            CakeProduct item = _productRepo.GetById(id);
             if (item != null)
             {
-                if (item.IsLowStock()) Islow?.Invoke(this, new InventoryLowEventArgs(item));
+                if (item.StockQty < ReorderThreshold)
+                {
+                    Islow?.Invoke(this, new InventoryLowEventArgs(item));
+                }
             }
         }
         public void DecreaseStock(string id, int amount)
         {
             TransactionService trans = new TransactionService();
-            CakeProduct item = inventory.GetById(id);
+            CakeProduct item = _productRepo.GetById(id);
             if (item == null) {
                 throw new InvalidOperationException("There are no products matching the ID!!");
             }
@@ -43,13 +52,13 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
         public void ReStock(string id, int amount)
         {
             TransactionService trans = new TransactionService();
-            CakeProduct item = inventory.GetById(id);
+            CakeProduct item = _productRepo.GetById(id);
             if (item == null)
             {
                 throw new InvalidOperationException("There are no products matching the ID!!");
             }
             item.StockQty = amount;
-            inventory.Update(id, item);
+            _productRepo.Update(id, item);
 
             trans.AddTransaction(new InventoryTransaction(item, amount, "RS-T02"));
         }

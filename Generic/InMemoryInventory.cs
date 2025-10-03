@@ -10,7 +10,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Generic
 {
     public class InMemoryInventory<T, Tkey> : IRepository<T, Tkey> where T : IEntity<Tkey>
     {
-        private List<T> inventory = new List<T>();
+        public List<T> inventory = new List<T>();
         
         public void Add(T item)
         {

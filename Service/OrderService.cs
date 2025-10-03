@@ -15,11 +15,11 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
 {
     public class OrderService
     {
-        public InMemoryInventory<Order, string> _repoOrder = new InMemoryInventory<Order, string>(); 
-        public InMemoryInventory<Customer, string> _repoCustomer = new InMemoryInventory<Customer, string>();
-        public InMemoryInventory<CakeProduct, string> _repoProduct = new InMemoryInventory<CakeProduct, string>();
-        public InMemoryInventory<Payment, string> _repoPayment = new InMemoryInventory<Payment, string>();
-        InventoryService InService = new InventoryService();
+        private readonly IRepository<CakeProduct, string> _repoProduct;
+        private readonly IRepository<Order, string> _repoOrder;
+        private readonly IRepository<Customer, string> _repoCustomer;
+        private readonly IRepository<Payment, string> _repoPayment;
+        private readonly InventoryService InService;
         public event EventHandler<CanAccruePoint> AddPoint;
         public event EventHandler<OrderChangeStatus> _OrderChangeStatus;
         private readonly IPriceRule _pricerule;
@@ -34,13 +34,21 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
                             IOrderDiscountPolicy orderDiscount,
                             ITaxCaculators tax,
                             IPromotionRule<Order> promotion,
-                            IShippingFee shippingfee)
+                            IShippingFee shippingfee,
+                            IRepository<CakeProduct,string> _repoProduct,
+                            IRepository<Order, string> _repoOrder,
+                            IRepository<Customer, string> _repoCustomer,
+                            IRepository<Payment, string> _repoPayment)
         {
             _pricerule = pricerule;
             _OrderDiscount = orderDiscount;
             _tax = tax;
             _shippingfee = shippingfee;
             _Promotion = promotion;
+            this._repoOrder = _repoOrder;
+            this._repoCustomer = _repoCustomer;
+            this._repoProduct = _repoProduct;
+            this._repoPayment = _repoPayment;
         }
         public void CreateOrder(string Customerid, bool IsShipping)
         {

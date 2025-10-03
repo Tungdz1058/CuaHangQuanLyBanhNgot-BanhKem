@@ -13,7 +13,6 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         public CakeType caketype { get; set; }
         public decimal UnitPrice { get; set; }
         public int StockQty { get; set; }
-        public int ReorderThreshold { get; private set; } = 10;
         public bool IsActive { get; set; }
         public bool IsTopping { get; set; }
         public CakeSize size { get; private set; }
@@ -25,7 +24,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         {
             this.StockQty -= amount;
         }
-        public virtual bool IsLowStock() => StockQty < ReorderThreshold;
+        public virtual bool IsLowStock() => true;
 
     }
 }

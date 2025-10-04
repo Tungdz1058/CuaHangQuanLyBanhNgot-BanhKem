@@ -21,30 +21,31 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
         private readonly IRepository<Payment, string> _repoPayment;
         private readonly InventoryService InService;
         public event EventHandler<CanAccruePoint> AddPoint;
-        public event EventHandler<OrderChangeStatus> _OrderChangeStatus;
         private readonly IPriceRule _pricerule;
         private readonly IOrderDiscountPolicy _OrderDiscount;
         private readonly ITaxCaculators _tax;
         private readonly IShippingFee _shippingfee;
-        private readonly IPromotionRule<Order> _Promotion;
-
+        public  IPromotionRule<Order> _Promotion;
+        public TransactionService trans;
         private readonly IReceiptFormatter _format;
 
-        public OrderService(IPriceRule pricerule,
+        public OrderService(InventoryService InService,
+                            TransactionService trans,
+                            IPriceRule pricerule,
                             IOrderDiscountPolicy orderDiscount,
                             ITaxCaculators tax,
-                            IPromotionRule<Order> promotion,
                             IShippingFee shippingfee,
                             IRepository<CakeProduct,string> _repoProduct,
                             IRepository<Order, string> _repoOrder,
                             IRepository<Customer, string> _repoCustomer,
                             IRepository<Payment, string> _repoPayment)
         {
+            this.InService = InService;
+            this.trans = trans;
             _pricerule = pricerule;
             _OrderDiscount = orderDiscount;
             _tax = tax;
             _shippingfee = shippingfee;
-            _Promotion = promotion;
             this._repoOrder = _repoOrder;
             this._repoCustomer = _repoCustomer;
             this._repoProduct = _repoProduct;
@@ -53,11 +54,19 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
         public void CreateOrder(string Customerid, bool IsShipping)
         {
             Console.WriteLine("Customers place orders!!");
-
-            var NewOrder = new Order(Customerid,OrderStatus.Draft, _pricerule,_shippingfee,_OrderDiscount,_tax,IsShipping);
+            Customer customer = _repoCustomer.GetById(Customerid);
+            if (customer == null) throw new InvalidOperationException("Customer not found!!");
+            var NewOrder = new Order(Customerid,customer,OrderStatus.Draft, _pricerule,_shippingfee,_OrderDiscount,_tax,IsShipping);
             NewOrder.OrderDate = DateTime.Now;
-            if (NewOrder.IsShipping) NewOrder.Adress = int.Parse(Console.ReadLine());
-            
+            if (NewOrder.IsShipping)
+            {
+                Console.Write("Vui lòng nhập địa chỉ cần giao: ");
+                NewOrder.Adress = int.Parse(Console.ReadLine());
+            }
+            NewOrder._OrderChangeStatus += (s, e) =>
+            {
+                Console.WriteLine($"[EVENT] Order's old status {e.old} -> Order's new status {e.newstatus}");
+            };
             _repoOrder.Add(NewOrder);
         }
         public void AddLine(string Orderid,string ProductID,int quantity,CakeSize size,Topping topping)
@@ -66,9 +75,10 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             if (order == null) throw new InvalidOperationException("Order not found!!");
             CakeProduct product = _repoProduct.GetById(ProductID);
             if (product == null) throw new InvalidOperationException("Product not found!!");
+
             bool IsReward = (quantity >= 10) ? true : false;
             order.AddLine(new OrderLine(Orderid, product, size, topping, quantity, IsReward));
-            _Promotion.ApplyPromotionRule(order);
+            
             _repoOrder.Update(Orderid, order);
         }
         public void Confirmed(string OrderID)
@@ -76,14 +86,6 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             Order order = _repoOrder.GetById(OrderID);
             if (order == null) throw new InvalidOperationException("Order not found!!");
             if (order.status != OrderStatus.Draft) throw new InvalidOperationException("Only Draft can be Confirmed!!");
-
-            Console.WriteLine("Bạn có muốn xác nhận đơn hàng? (y/n)");
-            string res = Console.ReadLine() ?? "n";
-            if (res == "y")
-            {
-                Cancelled(OrderID);
-                return;
-            }
 
             foreach (var line in order.lines)
             {
@@ -99,10 +101,12 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             if (order == null) throw new InvalidOperationException("Order not found!!");
             Customer customer = _repoCustomer.GetById(OrderID);
             if (customer == null) throw new InvalidOperationException("Customer not found!!");
-            Payment NewPay = new Payment(payment, DateTime.Now, OrderID);
+            _Promotion.ApplyPromotionRule(order);
+            Console.WriteLine($"{payment} - {DateTime.Now} - {OrderID}");
+            Payment NewPay = new Payment(payment, DateTime.Now, OrderID, order);
             _repoPayment.Add(NewPay);
             order.ChangeStatus(OrderStatus.Paid);
-            TransactionService trans = new TransactionService();
+
             if (order.customer is MemberCustomer member)
             {
                 member.AddPoints(order.Total / 10m);

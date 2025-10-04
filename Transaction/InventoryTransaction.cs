@@ -27,13 +27,34 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Transaction
         }
         public void Print()
         {
-            Console.WriteLine("============ INVENTORY TRANSACTION ============");
-            Console.WriteLine($"Transaction ID : {TransactionID}");
-            Console.WriteLine($"Date           : {date}");
-            Console.WriteLine($"Product        : {product.Name} (ID: {product.ProductId})");
-            Console.WriteLine($"Change Amount  : {ChangeStockAmount}");
-            Console.WriteLine($"Current Stock  : {CurrentStockAmount}");
-            Console.WriteLine("===============================================");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔══════════════════════════════════════════════╗");
+            Console.WriteLine("║        📦  INVENTORY TRANSACTION LOG         ║");
+            Console.WriteLine("╚══════════════════════════════════════════════╝");
+            Console.ResetColor();
+
+            Console.WriteLine($"🆔 Transaction ID   : {TransactionID}");
+            Console.WriteLine($"📅 Date             : {date:dd/MM/yyyy HH:mm}");
+            Console.WriteLine($"🍰 Product          : {product.Name} (ID: {product.ProductId})");
+
+            if (ChangeStockAmount > 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"➕ Change Amount    : -{ChangeStockAmount}");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"➖ Change Amount    : {ChangeStockAmount}");
+            }
+            Console.ResetColor();
+
+            Console.WriteLine($"📦 Current Stock    : {CurrentStockAmount}");
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("════════════════════════════════════════════════");
+            Console.ResetColor();
+
         }
     }
 }

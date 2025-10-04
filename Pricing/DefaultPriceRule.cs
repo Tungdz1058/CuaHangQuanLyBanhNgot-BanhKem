@@ -11,6 +11,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Pricing
     {
         public decimal LineAmount(OrderLine line )
         {
+            line.ComputeLineAmount();
             return line.LineAmount;
         }
 

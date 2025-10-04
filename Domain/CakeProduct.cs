@@ -24,7 +24,6 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         {
             this.StockQty -= amount;
         }
-        public virtual bool IsLowStock() => true;
 
     }
 }

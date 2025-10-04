@@ -19,6 +19,11 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         public bool IsReward { get; private set; }
         public OrderLine(string Lineid, CakeProduct product, CakeSize size, Topping topping, int quantity, bool IsReward)
         {
+            if (product == null)
+            {
+                Console.WriteLine("DEBUG: Product trong OrderLine = NULL");
+                
+            }
             this.LineId = Lineid;
             this.product = product;
             this.size = size;

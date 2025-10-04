@@ -26,7 +26,9 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Promotion_rule
                     var newline = new OrderLine(order.lines[i].LineId, order.lines[i].product, CakeSize.L,Topping.cheese,1, order.lines[i].IsReward);
                     newline.LineDiscountPercent = 1m;
                     order.lines.Add(newline);
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"Reward x1 {order.lines[i].product.Name} - Size : {CakeSize.L} - Topping : {Topping.cheese}");
+                    Console.ResetColor();
                 }
             }
         }

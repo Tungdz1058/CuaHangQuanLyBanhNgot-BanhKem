@@ -20,12 +20,12 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
         public string ID => paymentid;
 
     
-        public Payment(PaymentMethod method, DateTime time, string paymentid)
+        public Payment(PaymentMethod method, DateTime time, string paymentid, Order order)
         {
             this.method = method;
             this.order = order;
-            this.PaidDateAt = time;
-            this.Amount = order.Total;
+            PaidDateAt = time;
+            Amount = order.Total;
             this.paymentid = paymentid;
         }
     }

@@ -7,52 +7,92 @@
       "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\receipts\\detailreceiptformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:receipts\\detailreceiptformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\orderline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\orderline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\transaction\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:transaction\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\spendbasediscountpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\spendbasediscountpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\cakeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\cakeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\orderline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\orderline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\defaultpricerule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\defaultpricerule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\service\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:service\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\promotion rule\\buy10get1free.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:promotion rule\\buy10get1free.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\receipts\\detailreceiptformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:receipts\\detailreceiptformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\generic\\inmemoryinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:generic\\inmemoryinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\promotion rule\\ipromotionrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:promotion rule\\ipromotionrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\transaction\\inventorytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:transaction\\inventorytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\transaction\\itransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:transaction\\itransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\receipts\\ireceiptformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:receipts\\ireceiptformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\cakeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\cakeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\vattax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\vattax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\iorderdiscountpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\iorderdiscountpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:domain\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\transaction\\ordertransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:transaction\\ordertransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\promotion rule\\ipromotionrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:promotion rule\\ipromotionrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\domain\\membercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,16 +111,8 @@
       "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:generic\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\defaultpricerule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\defaultpricerule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\innercityshipping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\innercityshipping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\iorderdiscountpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\iorderdiscountpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\ipricerule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,45 +127,7 @@
       "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\itaxcaculators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\spendbasediscountpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\spendbasediscountpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\pricing\\vattax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:pricing\\vattax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\service\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:service\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\transaction\\inventorytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:transaction\\inventorytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\transaction\\ordertransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:transaction\\ordertransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\transaction\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:transaction\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\AppData\\Local\\Temp\\15a8bd40-b0a1-4cc4-94c0-8fe065cf3edc_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Services\\OrderService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\AppData\\Local\\Temp\\d5f3a5a9-71e1-4ac0-8314-e3176390eae6_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Services\\InventoryService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\AppData\\Local\\Temp\\b80c180f-675c-4f4a-bd82-b977e368d228_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\transaction\\itransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:transaction\\itransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\receipts\\ireceiptformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E0F9BBC-88E7-4C1D-9B14-815521CCC3F2}|QuanLyCuaHangBanhNgot\u0026BanhKem.csproj|solutionrelative:receipts\\ireceiptformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -143,7 +137,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -151,15 +145,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderLine.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\OrderLine.cs",
-              "RelativeDocumentMoniker": "Domain\\OrderLine.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\OrderLine.cs",
-              "RelativeToolTip": "Domain\\OrderLine.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wB8AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAGsAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:18:10.118Z",
+              "WhenOpened": "2025-09-27T13:43:59.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Service\\OrderService.cs",
+              "RelativeDocumentMoniker": "Service\\OrderService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Service\\OrderService.cs",
+              "RelativeToolTip": "Service\\OrderService.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAIwGgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T06:26:12.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TransactionService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\TransactionService.cs",
+              "RelativeDocumentMoniker": "Transaction\\TransactionService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\TransactionService.cs",
+              "RelativeToolTip": "Transaction\\TransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T05:44:57.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Buy10Get1Free.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Promotion rule\\Buy10Get1Free.cs",
+              "RelativeDocumentMoniker": "Promotion rule\\Buy10Get1Free.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Promotion rule\\Buy10Get1Free.cs",
+              "RelativeToolTip": "Promotion rule\\Buy10Get1Free.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T06:18:12.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InventoryService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Service\\InventoryService.cs",
+              "RelativeDocumentMoniker": "Service\\InventoryService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Service\\InventoryService.cs",
+              "RelativeToolTip": "Service\\InventoryService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAkwC0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T02:33:26.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DetailReceiptFormatter.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Receipts\\DetailReceiptFormatter.cs",
+              "RelativeDocumentMoniker": "Receipts\\DetailReceiptFormatter.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Receipts\\DetailReceiptFormatter.cs",
+              "RelativeToolTip": "Receipts\\DetailReceiptFormatter.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowD8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T15:34:27.697Z",
               "EditorCaption": ""
             },
             {
@@ -170,61 +229,48 @@
               "RelativeDocumentMoniker": "Domain\\Order.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Order.cs",
               "RelativeToolTip": "Domain\\Order.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAwwE0AAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAIAwwFQAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-27T15:28:44.458Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAHYBAAAAAAAAAAAAAI8BAAApAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "SpendBaseDiscountPolicy.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\SpendBaseDiscountPolicy.cs",
+              "RelativeDocumentMoniker": "Pricing\\SpendBaseDiscountPolicy.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\SpendBaseDiscountPolicy.cs",
+              "RelativeToolTip": "Pricing\\SpendBaseDiscountPolicy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:43:59.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Service\\OrderService.cs",
-              "RelativeDocumentMoniker": "Service\\OrderService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Service\\OrderService.cs",
-              "RelativeToolTip": "Service\\OrderService.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAuwEAAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T06:26:12.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "InMemoryInventory.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Generic\\InMemoryInventory.cs",
-              "RelativeDocumentMoniker": "Generic\\InMemoryInventory.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Generic\\InMemoryInventory.cs",
-              "RelativeToolTip": "Generic\\InMemoryInventory.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T13:41:42.615Z",
+              "WhenOpened": "2025-09-28T04:07:50.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Buy10Get1Free.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Promotion rule\\Buy10Get1Free.cs",
-              "RelativeDocumentMoniker": "Promotion rule\\Buy10Get1Free.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Promotion rule\\Buy10Get1Free.cs",
-              "RelativeToolTip": "Promotion rule\\Buy10Get1Free.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAAvAAAAAAAAAA==",
+              "Title": "DefaultPriceRule.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\DefaultPriceRule.cs",
+              "RelativeDocumentMoniker": "Pricing\\DefaultPriceRule.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\DefaultPriceRule.cs",
+              "RelativeToolTip": "Pricing\\DefaultPriceRule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T06:18:12.159Z",
+              "WhenOpened": "2025-09-28T04:04:42.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderLine.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\OrderLine.cs",
+              "RelativeDocumentMoniker": "Domain\\OrderLine.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\OrderLine.cs",
+              "RelativeToolTip": "Domain\\OrderLine.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwGoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T04:18:10.118Z",
               "EditorCaption": ""
             },
             {
@@ -233,134 +279,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DetailReceiptFormatter.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Receipts\\DetailReceiptFormatter.cs",
-              "RelativeDocumentMoniker": "Receipts\\DetailReceiptFormatter.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Receipts\\DetailReceiptFormatter.cs",
-              "RelativeToolTip": "Receipts\\DetailReceiptFormatter.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAmwC8AAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T15:34:27.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CakeProduct.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\CakeProduct.cs",
-              "RelativeDocumentMoniker": "Domain\\CakeProduct.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\CakeProduct.cs",
-              "RelativeToolTip": "Domain\\CakeProduct.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBAAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T14:00:17.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Customer.cs",
-              "RelativeDocumentMoniker": "Domain\\Customer.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Customer.cs",
-              "RelativeToolTip": "Domain\\Customer.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T14:14:22.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Enums.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Enums.cs",
-              "RelativeDocumentMoniker": "Domain\\Enums.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Enums.cs",
-              "RelativeToolTip": "Domain\\Enums.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:51:00.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "IPromotionRule.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Promotion rule\\IPromotionRule.cs",
-              "RelativeDocumentMoniker": "Promotion rule\\IPromotionRule.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Promotion rule\\IPromotionRule.cs",
-              "RelativeToolTip": "Promotion rule\\IPromotionRule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Title": "InMemoryInventory.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Generic\\InMemoryInventory.cs",
+              "RelativeDocumentMoniker": "Generic\\InMemoryInventory.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Generic\\InMemoryInventory.cs",
+              "RelativeToolTip": "Generic\\InMemoryInventory.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA+wCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T06:16:28.688Z",
+              "WhenOpened": "2025-09-28T13:41:42.615Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Payment.cs",
-              "RelativeDocumentMoniker": "Domain\\Payment.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Payment.cs",
-              "RelativeToolTip": "Domain\\Payment.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T13:22:14.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Event.cs",
-              "RelativeDocumentMoniker": "Domain\\Event.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Event.cs",
-              "RelativeToolTip": "Domain\\Event.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T06:50:39.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MemberCustomer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\MemberCustomer.cs",
-              "RelativeDocumentMoniker": "Domain\\MemberCustomer.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\MemberCustomer.cs",
-              "RelativeToolTip": "Domain\\MemberCustomer.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T15:16:14.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "WalkInCustomer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\WalkInCustomer.cs",
-              "RelativeDocumentMoniker": "Domain\\WalkInCustomer.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\WalkInCustomer.cs",
-              "RelativeToolTip": "Domain\\WalkInCustomer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T14:38:03.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IEntity.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Generic\\IEntity.cs",
-              "RelativeDocumentMoniker": "Generic\\IEntity.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Generic\\IEntity.cs",
-              "RelativeToolTip": "Generic\\IEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T04:24:12.848Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Generic\\IRepository.cs",
               "RelativeDocumentMoniker": "Generic\\IRepository.cs",
@@ -373,27 +305,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DefaultPriceRule.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\DefaultPriceRule.cs",
-              "RelativeDocumentMoniker": "Pricing\\DefaultPriceRule.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\DefaultPriceRule.cs",
-              "RelativeToolTip": "Pricing\\DefaultPriceRule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "InventoryTransaction.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\InventoryTransaction.cs",
+              "RelativeDocumentMoniker": "Transaction\\InventoryTransaction.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\InventoryTransaction.cs",
+              "RelativeToolTip": "Transaction\\InventoryTransaction.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwC4AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:04:42.236Z"
+              "WhenOpened": "2025-09-30T05:09:33.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ITransaction.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\ITransaction.cs",
+              "RelativeDocumentMoniker": "Transaction\\ITransaction.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\ITransaction.cs",
+              "RelativeToolTip": "Transaction\\ITransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T05:19:01.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IReceiptFormatter.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Receipts\\IReceiptFormatter.cs",
+              "RelativeDocumentMoniker": "Receipts\\IReceiptFormatter.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Receipts\\IReceiptFormatter.cs",
+              "RelativeToolTip": "Receipts\\IReceiptFormatter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T15:04:19.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Enums.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Enums.cs",
+              "RelativeToolTip": "Domain\\Enums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T13:51:00.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Customer.cs",
+              "RelativeDocumentMoniker": "Domain\\Customer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Customer.cs",
+              "RelativeToolTip": "Domain\\Customer.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwC8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T14:14:22.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CakeProduct.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\CakeProduct.cs",
+              "RelativeDocumentMoniker": "Domain\\CakeProduct.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\CakeProduct.cs",
+              "RelativeToolTip": "Domain\\CakeProduct.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T14:00:17.713Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "InnerCityShipping.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\InnerCityShipping.cs",
-              "RelativeDocumentMoniker": "Pricing\\InnerCityShipping.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\InnerCityShipping.cs",
-              "RelativeToolTip": "Pricing\\InnerCityShipping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "VATTax.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\VATTax.cs",
+              "RelativeDocumentMoniker": "Pricing\\VATTax.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\VATTax.cs",
+              "RelativeToolTip": "Pricing\\VATTax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:10:24.313Z"
+              "WhenOpened": "2025-09-28T04:09:22.69Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -405,95 +404,25 @@
               "RelativeToolTip": "Pricing\\IOrderDiscountPolicy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:06:00.744Z"
+              "WhenOpened": "2025-09-28T04:06:00.744Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "IPriceRule.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\IPriceRule.cs",
-              "RelativeDocumentMoniker": "Pricing\\IPriceRule.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\IPriceRule.cs",
-              "RelativeToolTip": "Pricing\\IPriceRule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Payment.cs",
+              "RelativeDocumentMoniker": "Domain\\Payment.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Payment.cs",
+              "RelativeToolTip": "Domain\\Payment.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:03:17.519Z"
+              "WhenOpened": "2025-09-28T13:22:14.251Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "IShippingFee.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\IShippingFee.cs",
-              "RelativeDocumentMoniker": "Pricing\\IShippingFee.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\IShippingFee.cs",
-              "RelativeToolTip": "Pricing\\IShippingFee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:09:48.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ITaxCaculators.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\ITaxCaculators.cs",
-              "RelativeDocumentMoniker": "Pricing\\ITaxCaculators.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\ITaxCaculators.cs",
-              "RelativeToolTip": "Pricing\\ITaxCaculators.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:08:26.601Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SpendBaseDiscountPolicy.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\SpendBaseDiscountPolicy.cs",
-              "RelativeDocumentMoniker": "Pricing\\SpendBaseDiscountPolicy.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\SpendBaseDiscountPolicy.cs",
-              "RelativeToolTip": "Pricing\\SpendBaseDiscountPolicy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:07:50.464Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "VATTax.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\VATTax.cs",
-              "RelativeDocumentMoniker": "Pricing\\VATTax.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\VATTax.cs",
-              "RelativeToolTip": "Pricing\\VATTax.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:09:22.69Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "InventoryService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Service\\InventoryService.cs",
-              "RelativeDocumentMoniker": "Service\\InventoryService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Service\\InventoryService.cs",
-              "RelativeToolTip": "Service\\InventoryService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T02:33:26.671Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "InventoryTransaction.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\InventoryTransaction.cs",
-              "RelativeDocumentMoniker": "Transaction\\InventoryTransaction.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\InventoryTransaction.cs",
-              "RelativeToolTip": "Transaction\\InventoryTransaction.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAuwB0AAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T05:09:33.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
               "Title": "OrderTransaction.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\OrderTransaction.cs",
               "RelativeDocumentMoniker": "Transaction\\OrderTransaction.cs",
@@ -501,35 +430,25 @@
               "RelativeToolTip": "Transaction\\OrderTransaction.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T14:48:48.75Z"
+              "WhenOpened": "2025-10-01T14:48:48.75Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "TransactionService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\TransactionService.cs",
-              "RelativeDocumentMoniker": "Transaction\\TransactionService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\TransactionService.cs",
-              "RelativeToolTip": "Transaction\\TransactionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "IPromotionRule.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Promotion rule\\IPromotionRule.cs",
+              "RelativeDocumentMoniker": "Promotion rule\\IPromotionRule.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Promotion rule\\IPromotionRule.cs",
+              "RelativeToolTip": "Promotion rule\\IPromotionRule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T05:44:57.749Z"
+              "WhenOpened": "2025-10-02T06:16:28.688Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\15a8bd40-b0a1-4cc4-94c0-8fe065cf3edc_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\15a8bd40-b0a1-4cc4-94c0-8fe065cf3edc_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Services\\OrderService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\15a8bd40-b0a1-4cc4-94c0-8fe065cf3edc_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Services\\OrderService.cs",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\15a8bd40-b0a1-4cc4-94c0-8fe065cf3edc_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Services\\OrderService.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T07:11:25.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "InventoryService.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\d5f3a5a9-71e1-4ac0-8314-e3176390eae6_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Services\\InventoryService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\d5f3a5a9-71e1-4ac0-8314-e3176390eae6_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Services\\InventoryService.cs",
@@ -542,39 +461,99 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\b80c180f-675c-4f4a-bd82-b977e368d228_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Program.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\b80c180f-675c-4f4a-bd82-b977e368d228_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\b80c180f-675c-4f4a-bd82-b977e368d228_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Program.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\b80c180f-675c-4f4a-bd82-b977e368d228_SalesRiceStore.zip.SalesRiceStore.zip\\SalesRiceStore\\SalesRiceStore\\Program.cs [Read Only]",
+              "DocumentIndex": 24,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Event.cs",
+              "RelativeDocumentMoniker": "Domain\\Event.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\Event.cs",
+              "RelativeToolTip": "Domain\\Event.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T10:16:29.11Z",
-              "EditorCaption": " [Read Only]"
+              "WhenOpened": "2025-09-28T06:50:39.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "ITransaction.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\ITransaction.cs",
-              "RelativeDocumentMoniker": "Transaction\\ITransaction.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Transaction\\ITransaction.cs",
-              "RelativeToolTip": "Transaction\\ITransaction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "MemberCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\MemberCustomer.cs",
+              "RelativeDocumentMoniker": "Domain\\MemberCustomer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\MemberCustomer.cs",
+              "RelativeToolTip": "Domain\\MemberCustomer.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T05:19:01.867Z"
+              "WhenOpened": "2025-09-27T15:16:14.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "IReceiptFormatter.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Receipts\\IReceiptFormatter.cs",
-              "RelativeDocumentMoniker": "Receipts\\IReceiptFormatter.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Receipts\\IReceiptFormatter.cs",
-              "RelativeToolTip": "Receipts\\IReceiptFormatter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "WalkInCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\WalkInCustomer.cs",
+              "RelativeDocumentMoniker": "Domain\\WalkInCustomer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Domain\\WalkInCustomer.cs",
+              "RelativeToolTip": "Domain\\WalkInCustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T15:04:19.827Z"
+              "WhenOpened": "2025-09-27T14:38:03.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IEntity.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Generic\\IEntity.cs",
+              "RelativeDocumentMoniker": "Generic\\IEntity.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Generic\\IEntity.cs",
+              "RelativeToolTip": "Generic\\IEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T04:24:12.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "InnerCityShipping.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\InnerCityShipping.cs",
+              "RelativeDocumentMoniker": "Pricing\\InnerCityShipping.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\InnerCityShipping.cs",
+              "RelativeToolTip": "Pricing\\InnerCityShipping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T04:10:24.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IPriceRule.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\IPriceRule.cs",
+              "RelativeDocumentMoniker": "Pricing\\IPriceRule.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\IPriceRule.cs",
+              "RelativeToolTip": "Pricing\\IPriceRule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T04:03:17.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IShippingFee.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\IShippingFee.cs",
+              "RelativeDocumentMoniker": "Pricing\\IShippingFee.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\IShippingFee.cs",
+              "RelativeToolTip": "Pricing\\IShippingFee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T04:09:48.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ITaxCaculators.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\ITaxCaculators.cs",
+              "RelativeDocumentMoniker": "Pricing\\ITaxCaculators.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\QuanLyCuaHangBanhNgot\u0026BanhKem\\Pricing\\ITaxCaculators.cs",
+              "RelativeToolTip": "Pricing\\ITaxCaculators.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T04:08:26.601Z"
             }
           ]
         }

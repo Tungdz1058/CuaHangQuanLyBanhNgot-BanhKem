@@ -15,11 +15,13 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
     {
         private readonly IRepository<CakeProduct, string> _productRepo;
         public event EventHandler<InventoryLowEventArgs> Islow;
+        TransactionService trans;
         public int ReorderThreshold { get; private set; }
-        public InventoryService(IRepository<CakeProduct,string> repo,int ReorderThreshold)
+        public InventoryService(IRepository<CakeProduct,string> repo,int ReorderThreshold,TransactionService trans)
         {
             this._productRepo = repo;
             this.ReorderThreshold = ReorderThreshold;
+            this.trans = trans;
         }
         public void CheckStock(string id)
         {
@@ -34,7 +36,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
         }
         public void DecreaseStock(string id, int amount)
         {
-            TransactionService trans = new TransactionService();
+            
             CakeProduct item = _productRepo.GetById(id);
             if (item == null) {
                 throw new InvalidOperationException("There are no products matching the ID!!");
@@ -44,7 +46,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             }
 
             item.DeductStock(amount);
-            if(item.IsLowStock()) Islow?.Invoke(this, new InventoryLowEventArgs(item));
+            if(item.StockQty < ReorderThreshold) Islow?.Invoke(this, new InventoryLowEventArgs(item));
 
             trans.AddTransaction(new InventoryTransaction(item, amount, "DS-T01"));
         }

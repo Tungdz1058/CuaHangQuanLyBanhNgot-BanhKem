@@ -15,6 +15,7 @@ using QuanLyCuaHangBanhNgot_BanhKem.Pricing;
 using QuanLyCuaHangBanhNgot_BanhKem.Promotion_rule;
 using QuanLyCuaHangBanhNgot_BanhKem.Receipts;
 using QuanLyCuaHangBanhNgot_BanhKem.Service;
+using QuanLyCuaHangBanhNgot_BanhKem.Transaction;
 
 namespace QuanLyCuaHangBanhNgot_BanhKem
 {
@@ -27,8 +28,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
             IPriceRule _pricerule = new DefaultPriceRule();
             IOrderDiscountPolicy _discountOrder = new SpendBaseDiscountPolicy();
             IShippingFee _shipping = new InnerCityShipping();
-            ITaxCaculators _taxCal = new VATTax.TenVATPercent();
-            IPromotionRule<Order> _promotionRule = new Buy10Get1Free(null);
+            ITaxCaculators _taxCal = new TenVATPercent();
 
             
             //khởi tạo menu:
@@ -37,11 +37,13 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
             InMemoryInventory<Order, string> _repoOrder = new InMemoryInventory<Order, string>();
             InMemoryInventory<Payment, string> _repoPayment = new InMemoryInventory<Payment, string>();
             int ReorderThreshold = 10;
-            var _InService = new InventoryService(menu,ReorderThreshold);
-            var _OrService = new OrderService(_pricerule, _discountOrder, _taxCal, _promotionRule, _shipping,menu,_repoOrder,_repoCustomer,_repoPayment);
+            TransactionService _TranService = new TransactionService();
+            var _InService = new InventoryService(menu,ReorderThreshold,_TranService);
+            var _OrService = new OrderService(_InService,_TranService,_pricerule, _discountOrder, _taxCal, _shipping,menu,_repoOrder,_repoCustomer,_repoPayment);
+            
             
             var c1_1 = new CakeProduct
-            {
+            { 
                 ProductId = "B-01",
                 Name = "Bánh mì bơ tỏi",
                 caketype = CakeType.Bread,
@@ -82,22 +84,19 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                 Console.WriteLine($"[EVENT] Low Stock: {e.product.ProductId} - Qty: {e.product.StockQty}");
                 Console.ResetColor();
             };
-            _OrService._OrderChangeStatus += (s, e) =>
-            {
-                Console.WriteLine($"[EVENT] Order's old status {e.old} -> Order's new status {e.newstatus}");
-            };
+            
             _OrService.AddPoint += (s, e) =>
             {
-                Console.WriteLine($"[Event] Points reward {e.points} -> Total points {e.total}");
+                Console.WriteLine($"[EVENT] Points reward {e.points} -> Total points {e.total}");
             };
             menu.Add(c1_1);
             menu.Add(c1_2);
             menu.Add(c2_1);
             menu.Add(c2_2);
 
-            var member1 = new MemberCustomer("MEM-01","Lê Đình Tùng", "0563090775", "Memberedx", 0, MemberTier.Standard);
+            var member1 = new MemberCustomer("MEM-01","Lê Đình Tùng", "0563090775", "Memberedx", 10, MemberTier.Standard);
             _repoCustomer.Add(member1);
-
+            
 
             while (true)
             {
@@ -360,8 +359,9 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                                 Console.ForegroundColor = ConsoleColor.Cyan;
                                 Console.WriteLine("1. 🛒 Tạo đơn hàng");
                                 Console.WriteLine("2. 💳 Tiến hành thanh toán");
-                                Console.WriteLine("3. 🧾 Xuất hóa đơn");
+                                Console.WriteLine("3. 📜 Lịch sử hóa đơn");
                                 Console.WriteLine("0. 🔙 Quay lại menu chính");
+
                                 Console.ResetColor();
 
                                 Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -374,59 +374,97 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                                     case "1":
                                         Console.Clear();
                                         Console.ForegroundColor = ConsoleColor.Cyan;
-                                        Console.WriteLine("=== 🛒 TẠO ĐƠN HÀNG ===");
+                                        Console.WriteLine("╔══════════════════════════════════════╗");
+                                        Console.WriteLine("║        🛒  TẠO ĐƠN HÀNG MỚI         ║");
+                                        Console.WriteLine("╚══════════════════════════════════════╝");
                                         Console.ResetColor();
 
                                         // B1: chọn khách hàng
-                                        Console.WriteLine("\n1. Thành viên");
-                                        Console.WriteLine("2. Vãng lai");
-                                        Console.Write("👉 Chọn loại khách hàng: ");
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.WriteLine("\n👤 Vui lòng chọn loại khách hàng:");
+                                        Console.ResetColor();
+                                        Console.WriteLine("  1️.  Thành viên");
+                                        Console.WriteLine("  2️.  Vãng lai");
+                                        Console.Write("\n👉 Nhập lựa chọn: ");
                                         string custType = Console.ReadLine();
+
                                         Customer customer;
                                         string ID = "WALK-01";
-                                        if(custType == "1")
+
+                                        if (custType == "1")
                                         {
-                                            Console.WriteLine("Vui lòng nhập mã khách hàng: ");
+                                            Console.Write("\n🔑 Vui lòng nhập mã khách hàng: ");
                                             ID = Console.ReadLine();
                                             customer = _repoCustomer.GetById(ID);
-                                            if (customer == null) throw new InvalidOperationException("Mã khách hàng không tìm thấy!!");
-                                        }else if(custType == "2")
+                                            if (customer == null)
+                                            {
+                                                Console.ForegroundColor = ConsoleColor.Red;
+                                                throw new InvalidOperationException("❌ Mã khách hàng không tìm thấy!!");
+                                            }
+                                        }
+                                        else if (custType == "2")
                                         {
-                                            Console.Write("Vui lòng nhập tên: ");
+                                            Console.Write("\n✍ Nhập tên khách hàng: ");
                                             string name = Console.ReadLine();
-                                            Console.Write("Vui lòng nhập số điện thoại: ");
+                                            Console.Write("📞 Nhập số điện thoại: ");
                                             string phonenum = Console.ReadLine();
-                                            customer = new WalkInCustomer(ID, name,phonenum);
+                                            customer = new WalkInCustomer(ID, name, phonenum);
+                                            _repoCustomer.Add(customer);
                                         }
 
                                         // B2: chọn sản phẩm
                                         Console.ForegroundColor = ConsoleColor.Cyan;
+                                        Console.WriteLine("\n╔═══════════════════════════════════════════════════════╗");
+                                        Console.WriteLine("║                    📋 DANH SÁCH SẢN PHẨM              ║");
+                                        Console.WriteLine("╚═══════════════════════════════════════════════════════╝");
                                         Console.WriteLine($"{"Mã SP",-8} {"Tên sản phẩm",-30} {"Loại",-8} {"Giá",-10} {"SL",-5}");
                                         Console.WriteLine(new string('-', 63));
                                         Console.ResetColor();
+
                                         foreach (var sp in menu.inventory)
                                         {
                                             Console.ForegroundColor = ConsoleColor.Green;
                                             Console.WriteLine($"{sp.ProductId,-8} {sp.Name,-30} {sp.caketype,-8} {sp.UnitPrice,-10} {sp.StockQty,-5}");
                                             Console.ResetColor();
                                         }
-                                        bool Ishipping = false;
-                                        Console.WriteLine("Vui lòng chọn (1 . Thanh toán tại quầy, 2 . Thanh toán khi giao hàng)");
-                                        string input1 = Console.ReadLine();
-                                        if (input1 == "2") Ishipping = true;
-                                        else if (input1 != "1" && input1 != "2") throw new InvalidOperationException("dữ liệu nhập không hợp lệ!!");
-                                        _OrService.CreateOrder(ID,Ishipping);
 
-                                        Console.Write("Nhập số loại bánh muốn mua: ");
-                                        int quantity =int.Parse(Console.ReadLine());
-                                        while (quantity >0)
+                                        bool Ishipping = false;
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.WriteLine("\n🚚 Vui lòng chọn phương thức thanh toán:");
+                                        Console.ResetColor();
+                                        Console.WriteLine("  1️.  Thanh toán tại quầy");
+                                        Console.WriteLine("  2️.  Thanh toán khi giao hàng");
+                                        Console.Write("\n👉 Lựa chọn của bạn: ");
+                                        string input1 = Console.ReadLine();
+
+                                        if (input1 == "2") Ishipping = true;
+                                        else if (input1 != "1" && input1 != "2")
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            throw new InvalidOperationException("❌ Dữ liệu nhập không hợp lệ!!");
+                                        }
+                                        _OrService.CreateOrder(ID, Ishipping);
+
+                                        // Thêm sản phẩm
+                                        Console.Write("\n🛍 Nhập số loại bánh muốn mua: ");
+                                        int quantity = int.Parse(Console.ReadLine());
+
+                                        while (quantity > 0)
                                         {
                                             quantity -= 1;
-                                            Console.Write("👉 Nhập mã sản phẩm cần thêm vào giỏ: ");
+                                            Console.ForegroundColor = ConsoleColor.Cyan;
+                                            Console.WriteLine($"\n╔══════════════════════════════════════╗");
+                                            Console.WriteLine($"║        🥮 THÊM SẢN PHẨM VÀO GIỎ      ║");
+                                            Console.WriteLine($"╚══════════════════════════════════════╝");
+                                            Console.ResetColor();
+
+                                            Console.Write("👉 Nhập mã sản phẩm: ");
                                             string productID = Console.ReadLine();
-                                            Console.Write("Nhập số lượng: ");
+
+                                            Console.Write("📦 Nhập số lượng: ");
                                             int qty = int.Parse(Console.ReadLine());
-                                            Console.Write("👉 Nhập size bánh (S = 0, M = 1, L = 2): ");
+
+                                            Console.Write("📏 Nhập size bánh (S = 0, M = 1, L = 2): ");
                                             int type2;
                                             CakeSize size;
                                             if (int.TryParse(Console.ReadLine(), out type2) && Enum.IsDefined(typeof(CakeSize), type2))
@@ -440,7 +478,8 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                                                 Console.ResetColor();
                                                 size = CakeSize.S;
                                             }
-                                            Console.Write("👉 Nhập topping bánh (cheese = 0, socola = 1, corn = 2, strawberry = 3): ");
+
+                                            Console.Write("🍫 Nhập topping (cheese = 0, socola = 1, corn = 2, strawberry = 3): ");
                                             int type3;
                                             Topping topping;
                                             if (int.TryParse(Console.ReadLine(), out type3) && Enum.IsDefined(typeof(Topping), type3))
@@ -454,25 +493,40 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                                                 Console.ResetColor();
                                                 topping = Topping.socola;
                                             }
+
                                             _OrService.AddLine(ID, productID, qty, size, topping);
                                         }
+
                                         // B3: xác nhận đơn
-                                        Console.WriteLine("=================================");
-                                        Console.WriteLine("1. ✅ Xác nhận");
-                                        Console.WriteLine("2. ❌ Hủy");
-                                        Console.Write("\nXác nhận đơn hàng? Vui lòng nhập: ");
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.WriteLine("\n=================================");
+                                        Console.WriteLine("1️.  ✅ Xác nhận đơn hàng");
+                                        Console.WriteLine("2️.  ❌ Hủy đơn hàng");
+                                        Console.ResetColor();
+
+                                        Console.Write("\n👉 Vui lòng chọn: ");
                                         string confirm = Console.ReadLine();
+
                                         if (confirm == "1")
                                         {
-                                            Console.WriteLine("✔ Đơn hàng đã được tạo thành công!");
-                                            // _repoOrder.Add(order);
+                                            Console.ForegroundColor = ConsoleColor.Green;
+                                            Console.WriteLine("\n✔ Đơn hàng đã được tạo thành công!");
+                                            Console.ResetColor();
+                                            _OrService.Confirmed(ID);
                                         }
                                         else
                                         {
-                                            Console.WriteLine("❌ Đơn hàng đã bị hủy.");
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.WriteLine("\n❌ Đơn hàng đã bị hủy.");
+                                            Console.ResetColor();
                                             _OrService.Cancelled(ID);
                                         }
+
+                                        Console.ForegroundColor = ConsoleColor.DarkBlue;
+                                        Console.WriteLine("\n👉 Nhấn phím bất kỳ để quay lại menu...");
+                                        Console.ResetColor();
                                         Console.ReadKey();
+
                                         break;
 
                                     case "2":
@@ -483,46 +537,46 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
 
                                         Console.Write("👉 Nhập mã đơn hàng cần thanh toán: ");
                                         string orderId = Console.ReadLine();
-
+                                        var CurrentOrder = _repoOrder.GetById(orderId);
+                                        if (CurrentOrder == null) throw new InvalidOperationException("Order not found!!");
+                                        _OrService._Promotion = new Buy10Get1Free(CurrentOrder);
                                         // (Tìm đơn hàng từ _repoOrder)
                                         Console.WriteLine("Chọn phương thức thanh toán:");
-                                        Console.WriteLine("1. Tiền mặt");
-                                        Console.WriteLine("2. Thẻ");
-                                        string payMethod = Console.ReadLine();
-
+                                        Console.WriteLine("0. Tiền mặt");
+                                        Console.WriteLine("1. Chuyển khoản ngân hàng: ");
+                                        
+                                        int type4;
+                                        PaymentMethod payMethod;
+                                        if (int.TryParse(Console.ReadLine(), out type4) && Enum.IsDefined(typeof(Topping), type4))
+                                        {
+                                            payMethod = (PaymentMethod)type4;
+                                        }
+                                        else
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.WriteLine("❌ Kiểu thanh toán không hợp lệ, mặc định là tiền mặt.");
+                                            Console.ResetColor();
+                                            payMethod = PaymentMethod.Cash;
+                                        }
+                                        CurrentOrder.Recalculate();
+                                        _OrService.Pay(orderId, payMethod);
                                         Console.WriteLine("✔ Thanh toán thành công!");
-                                        // _OrService.Pay(orderId, PaymentMethod.Cash/Card)
-
+                                        
                                         Console.ReadKey();
                                         break;
 
+                                    
                                     case "3":
                                         Console.Clear();
                                         Console.ForegroundColor = ConsoleColor.Cyan;
-                                        Console.WriteLine("=== 🧾 XUẤT HÓA ĐƠN ===");
+                                        Console.WriteLine("=== 📜 LỊCH SỬ HÓA ĐƠN ===");
                                         Console.ResetColor();
 
-                                        Console.Write("👉 Nhập mã đơn hàng cần in hóa đơn: ");
-                                        string billId = Console.ReadLine();
+                                        _TranService.PrintAll();
 
-                                        // (Lấy Order từ _repoOrder và in ra chi tiết)
-                                        Console.ForegroundColor = ConsoleColor.Yellow;
-                                        Console.WriteLine("\n====== HÓA ĐƠN BÁNH NGỌT & BÁNH KEM ======");
+                                        Console.ForegroundColor = ConsoleColor.DarkBlue;
+                                        Console.WriteLine("\n👉 Nhấn phím bất kỳ để quay lại menu...");
                                         Console.ResetColor();
-
-                                        // Giả lập in bill
-                                        Console.WriteLine($"Mã đơn: {billId}");
-                                        Console.WriteLine($"Ngày: {DateTime.Now}");
-                                        Console.WriteLine("----------------------------------------");
-                                        Console.WriteLine("SP01   | Bánh mì bơ tỏi   | 20.000 x2 = 40.000");
-                                        Console.WriteLine("SP02   | Bánh kem trứng   | 150.000 x1 = 150.000");
-                                        Console.WriteLine("----------------------------------------");
-                                        Console.WriteLine("Tạm tính: 190.000");
-                                        Console.WriteLine("VAT 10%: 19.000");
-                                        Console.WriteLine("Phí ship: 15.000");
-                                        Console.WriteLine("Tổng cộng: 224.000");
-                                        Console.WriteLine("========================================");
-
                                         Console.ReadKey();
                                         break;
 
@@ -551,8 +605,6 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                     Console.WriteLine("Ấn phím bất kỳ để thử lại...");
                     Console.ReadKey();
                 }
-
-
             }
         }
         }

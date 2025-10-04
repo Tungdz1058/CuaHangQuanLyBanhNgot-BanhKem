@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace QuanLyCuaHangBanhNgot_BanhKem.Pricing
 {
-    public class VATTax
-    {
         public class TenVATPercent : ITaxCaculators 
         {
             public decimal VATCal()
@@ -23,4 +21,3 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Pricing
             }
         }
     }
-}

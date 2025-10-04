@@ -40,6 +40,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
 
         public string ID => OrderID;
         public Order(string OrderId,
+                     Customer customer,
                      OrderStatus status,
                      IPriceRule price_rule,
                      IShippingFee _shipping,
@@ -48,11 +49,15 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
                      bool IsShipping)
         {
             this.status = status;
+            this.customer = customer;
             this.OrderID = OrderId;
             this.price_rule = price_rule;
             this._shipping = _shipping;
             this._orderdiscount = _orderdiscount;
+            this._taxCal = _taxCal;
             this.IsShipping = IsShipping;
+
+            
         }
 
         public void AddLine(OrderLine line)
@@ -69,21 +74,21 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Domain
             else
             {
                 var old = status;
+                status = newstatus;
                 var handler = _OrderChangeStatus;
                 handler?.Invoke(this, new OrderChangeStatus(this,old,newstatus));
             }
         }
-        public decimal Recalculate()
+        public void Recalculate()
         {
             foreach (var line in lines) { Subtotal = price_rule.LineAmount(line); }
-            OrderLevelDiscount = _orderdiscount.orderdiscountpercent(this);
-            VATAmount = _taxCal.VATCal()*Subtotal;
+            OrderLevelDiscount = _orderdiscount.orderdiscountpercent(this)*Subtotal;
+            Console.WriteLine($"{OrderLevelDiscount} - {Subtotal}");
+            VATAmount = _taxCal.VATCal() * Subtotal;
             if (IsShipping) ShippingFee = (Adress > 3m) ? (30m + _shipping.ShippingCompute(Adress - 3m)) : 30m;
-            else ShippingFee = 0m;
-            CustomerDiscount = customer.GetDiscountPercent() * Subtotal;
+            else ShippingFee = 0m; CustomerDiscount = customer.GetDiscountPercent() * Subtotal;
             decimal taxable = Subtotal - CustomerDiscount - OrderLevelDiscount + ShippingFee;
             Total = taxable + VATAmount;
-            return Total;
         }
     }
 }

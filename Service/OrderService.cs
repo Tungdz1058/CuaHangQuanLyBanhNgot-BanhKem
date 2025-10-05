@@ -97,12 +97,16 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
         }
         public void Pay(string OrderID,PaymentMethod payment)
         {
+
             Order order = _repoOrder.GetById(OrderID);
             if (order == null) throw new InvalidOperationException("Order not found!!");
+            if(order.status != OrderStatus.Confirmed)
+            {
+                throw new InvalidOperationException("Only confirmed order status can be fulfilled");
+            }
             Customer customer = _repoCustomer.GetById(OrderID);
             if (customer == null) throw new InvalidOperationException("Customer not found!!");
             _Promotion.ApplyPromotionRule(order);
-            Console.WriteLine($"{payment} - {DateTime.Now} - {OrderID}");
             Payment NewPay = new Payment(payment, DateTime.Now, OrderID, order);
             _repoPayment.Add(NewPay);
             order.ChangeStatus(OrderStatus.Paid);
@@ -114,6 +118,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
                 handler?.Invoke(this, new CanAccruePoint(Math.Round(order.Total / 10m), member.Points));
             }
             trans.AddTransaction(new OrderTransaction(OrderID, new DetailReceiptFormatter(order, customer, NewPay)));
+            _repoOrder.Remove(OrderID);
         }
         public void Cancelled(string OrderID)
         {
@@ -121,7 +126,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             if (order == null) throw new InvalidOperationException("Order not found!!");
             if (order.status != OrderStatus.Draft) throw new InvalidOperationException("Only Draft can be Cancelled!!");
 
-            order.ChangeStatus(OrderStatus.Cancelled);
+            order.ChangeStatus(OrderStatus.Cancelled); 
             _repoOrder.Remove(OrderID);
         }
     }

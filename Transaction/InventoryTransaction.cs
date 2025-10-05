@@ -39,8 +39,8 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Transaction
 
             if (ChangeStockAmount > 0)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"➕ Change Amount    : -{ChangeStockAmount}");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"➕ Change Amount    : +{ChangeStockAmount}");
             }
             else
             {

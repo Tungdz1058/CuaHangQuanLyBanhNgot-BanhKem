@@ -41,25 +41,21 @@ namespace QuanLyCuaHangBanhNgot_BanhKem.Service
             if (item == null) {
                 throw new InvalidOperationException("There are no products matching the ID!!");
             }
-            else if (item.StockQty < amount) {
-                throw new InvalidOperationException("Not enough stock!!");
-            }
 
             item.DeductStock(amount);
             if(item.StockQty < ReorderThreshold) Islow?.Invoke(this, new InventoryLowEventArgs(item));
 
-            trans.AddTransaction(new InventoryTransaction(item, amount, "DS-T01"));
+            trans.AddTransaction(new InventoryTransaction(item, -amount, "DS-T01"));
         }
 
         public void ReStock(string id, int amount)
         {
-            TransactionService trans = new TransactionService();
             CakeProduct item = _productRepo.GetById(id);
             if (item == null)
             {
                 throw new InvalidOperationException("There are no products matching the ID!!");
             }
-            item.StockQty = amount;
+            item.StockQty += amount;
             _productRepo.Update(id, item);
 
             trans.AddTransaction(new InventoryTransaction(item, amount, "RS-T02"));

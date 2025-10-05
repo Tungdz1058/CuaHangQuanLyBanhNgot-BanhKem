@@ -48,7 +48,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                 Name = "Bánh mì bơ tỏi",
                 caketype = CakeType.Bread,
                 UnitPrice = 20m,
-                StockQty = 50,
+                StockQty = 20,
                 IsActive = true,
             };
             var c1_2 = new CakeProduct
@@ -102,7 +102,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("======= 🧁 CỬA HÀNG BÁNH MÌ & BÁNH KEM =======");
+                Console.WriteLine("======= 🧁 ỨNG DỤNG CỬA HÀNG BÁNH MÌ & BÁNH KEM =======");
                 Console.ResetColor();
 
                 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -111,7 +111,11 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                 Console.WriteLine("3. 🗑️ Xóa sản phẩm");
                 Console.WriteLine("4. 📋 Danh sách sản phẩm");
                 Console.WriteLine("5. 🛒 Tạo đơn hàng cho khách");
-                
+                Console.WriteLine("6. 📦 thêm số lượng tồn kho");
+                Console.WriteLine("7. 📜 Lịch sử hóa đơn");
+                Console.WriteLine("8. ❌ Thoát ứng dụng");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("=======================================================");
                 Console.WriteLine();
 
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -124,8 +128,8 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                     if (!int.TryParse(input, out int res))
                         throw new Exception("❌ Dữ liệu nhập không hợp lệ, vui lòng nhập lại!");
 
-                    if (res < 0 || res > 5)
-                        throw new Exception("❌ Vui lòng nhập từ [0 -> 4]!");
+                    if (res < 0 || res > 8)
+                        throw new Exception("❌ Vui lòng nhập từ [0 -> 8]!");
 
                     switch (res)
                     {
@@ -359,7 +363,7 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                                 Console.ForegroundColor = ConsoleColor.Cyan;
                                 Console.WriteLine("1. 🛒 Tạo đơn hàng");
                                 Console.WriteLine("2. 💳 Tiến hành thanh toán");
-                                Console.WriteLine("3. 📜 Lịch sử hóa đơn");
+                                
                                 Console.WriteLine("0. 🔙 Quay lại menu chính");
 
                                 Console.ResetColor();
@@ -460,10 +464,14 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
 
                                             Console.Write("👉 Nhập mã sản phẩm: ");
                                             string productID = Console.ReadLine();
-
+                                            var product2 = menu.GetById(productID);
                                             Console.Write("📦 Nhập số lượng: ");
                                             int qty = int.Parse(Console.ReadLine());
-
+                                            if(qty > product2.StockQty)
+                                            {
+                                                _repoOrder.Remove(ID);
+                                                throw new InvalidOperationException($"{product2.Name} - {product2.StockQty} - Not enough stock!!");
+                                            }
                                             Console.Write("📏 Nhập size bánh (S = 0, M = 1, L = 2): ");
                                             int type2;
                                             CakeSize size;
@@ -526,60 +534,117 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                                         Console.WriteLine("\n👉 Nhấn phím bất kỳ để quay lại menu...");
                                         Console.ResetColor();
                                         Console.ReadKey();
-
+                                        Console.Clear();
                                         break;
 
                                     case "2":
                                         Console.Clear();
                                         Console.ForegroundColor = ConsoleColor.Cyan;
-                                        Console.WriteLine("=== 💳 TIẾN HÀNH THANH TOÁN ===");
+                                        Console.WriteLine("╔══════════════════════════════════════════════════════════╗");
+                                        Console.WriteLine("║                    💳  THANH TOÁN ĐƠN HÀNG                ║");
+                                        Console.WriteLine("╚══════════════════════════════════════════════════════════╝");
                                         Console.ResetColor();
 
-                                        Console.Write("👉 Nhập mã đơn hàng cần thanh toán: ");
+                                        // Bước 1: Nhập mã đơn hàng
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.Write("\n👉 Nhập mã đơn hàng cần thanh toán: ");
+                                        Console.ResetColor();
                                         string orderId = Console.ReadLine();
+
                                         var CurrentOrder = _repoOrder.GetById(orderId);
-                                        if (CurrentOrder == null) throw new InvalidOperationException("Order not found!!");
+
+                                        // Kiểm tra đơn hàng
+                                        if (CurrentOrder == null)
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.WriteLine("\n❌ Không tìm thấy đơn hàng với mã: " + orderId);
+                                            Console.ResetColor();
+                                            Console.WriteLine("\n👉 Nhấn phím bất kỳ để quay lại...");
+                                            Console.ReadKey();
+                                            break;
+                                        }
+
+                                        if (CurrentOrder.status == OrderStatus.Paid)
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.Green;
+                                            Console.WriteLine("\n✔ Đơn hàng này đã được thanh toán trước đó!");
+                                            Console.ResetColor();
+                                            Console.WriteLine("\n👉 Nhấn phím bất kỳ để quay lại...");
+                                            Console.ReadKey();
+                                            break;
+                                        }
+
+                                        // Áp dụng khuyến mãi (nếu có)
                                         _OrService._Promotion = new Buy10Get1Free(CurrentOrder);
-                                        // (Tìm đơn hàng từ _repoOrder)
-                                        Console.WriteLine("Chọn phương thức thanh toán:");
-                                        Console.WriteLine("0. Tiền mặt");
-                                        Console.WriteLine("1. Chuyển khoản ngân hàng: ");
-                                        
+
+                                        // Bước 2: chọn phương thức thanh toán
+                                        Console.Clear();
+                                        Console.ForegroundColor = ConsoleColor.Cyan;
+                                        Console.WriteLine("╔══════════════════════════════════════════════════════════╗");
+                                        Console.WriteLine("║                💰  CHỌN PHƯƠNG THỨC THANH TOÁN            ║");
+                                        Console.WriteLine("╚══════════════════════════════════════════════════════════╝");
+                                        Console.ResetColor();
+
+                                        Console.WriteLine();
+                                        Console.ForegroundColor = ConsoleColor.White;
+                                        Console.WriteLine("  [0] 💵  Tiền mặt");
+                                        Console.WriteLine("  [1] 🏦  Chuyển khoản ngân hàng");
+                                        Console.ResetColor();
+
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.Write("\n👉 Lựa chọn của bạn: ");
+                                        Console.ResetColor();
+
                                         int type4;
                                         PaymentMethod payMethod;
-                                        if (int.TryParse(Console.ReadLine(), out type4) && Enum.IsDefined(typeof(Topping), type4))
+                                        if (int.TryParse(Console.ReadLine(), out type4) && Enum.IsDefined(typeof(PaymentMethod), type4))
                                         {
                                             payMethod = (PaymentMethod)type4;
                                         }
                                         else
                                         {
                                             Console.ForegroundColor = ConsoleColor.Red;
-                                            Console.WriteLine("❌ Kiểu thanh toán không hợp lệ, mặc định là tiền mặt.");
+                                            Console.WriteLine("\n⚠️  Lựa chọn không hợp lệ! Hệ thống mặc định sử dụng 💵 Tiền mặt.");
                                             Console.ResetColor();
                                             payMethod = PaymentMethod.Cash;
                                         }
+
+                                        // Bước 3: tính toán và thanh toán
+                                        Console.Clear();
+                                        Console.ForegroundColor = ConsoleColor.Cyan;
+                                        Console.WriteLine("╔══════════════════════════════════════════════════════════╗");
+                                        Console.WriteLine("║                     🔄  ĐANG XỬ LÝ...                    ║");
+                                        Console.WriteLine("╚══════════════════════════════════════════════════════════╝");
+                                        Console.ResetColor();
+
+                                        Thread.Sleep(800); // hiệu ứng "loading" nhẹ cho trải nghiệm tốt hơn
+
                                         CurrentOrder.Recalculate();
                                         _OrService.Pay(orderId, payMethod);
-                                        Console.WriteLine("✔ Thanh toán thành công!");
-                                        
+
+                                        Console.ForegroundColor = ConsoleColor.Green;
+                                        Console.WriteLine("\n✔ Thanh toán thành công!");
+                                        Console.ResetColor();
+
+                                        Console.WriteLine("\n════════════════════════════════════════════════════════════");
+                                        Console.ForegroundColor = ConsoleColor.White;
+                                        Console.WriteLine($"🧾 Mã đơn: {CurrentOrder.OrderID}");
+                                        Console.WriteLine($"💰 Tổng tiền: {CurrentOrder.Total:C}");
+                                        Console.WriteLine($"💳 Phương thức: {payMethod}");
+                                        Console.WriteLine($"📅 Ngày thanh toán: {DateTime.Now:dd/MM/yyyy HH:mm}");
+                                        Console.ResetColor();
+                                        Console.WriteLine("════════════════════════════════════════════════════════════");
+
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.WriteLine("\n👉 Nhấn phím bất kỳ để quay lại menu chính...");
+                                        Console.ResetColor();
                                         Console.ReadKey();
+
+
                                         break;
 
                                     
-                                    case "3":
-                                        Console.Clear();
-                                        Console.ForegroundColor = ConsoleColor.Cyan;
-                                        Console.WriteLine("=== 📜 LỊCH SỬ HÓA ĐƠN ===");
-                                        Console.ResetColor();
-
-                                        _TranService.PrintAll();
-
-                                        Console.ForegroundColor = ConsoleColor.DarkBlue;
-                                        Console.WriteLine("\n👉 Nhấn phím bất kỳ để quay lại menu...");
-                                        Console.ResetColor();
-                                        Console.ReadKey();
-                                        break;
-
+                                    
                                     case "0":
                                         backOrderMenu = true;
                                         break;
@@ -593,6 +658,70 @@ namespace QuanLyCuaHangBanhNgot_BanhKem
                                 }
                             }
                             break;
+                        case (6):
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine("╔══════════════════════════════════════════╗");
+                            Console.WriteLine("║        📦 CẬP NHẬT TỒN KHO SẢN PHẨM      ║");
+                            Console.WriteLine("╚══════════════════════════════════════════╝");
+                            Console.ResetColor();
+
+                            // B1: In danh sách sản phẩm
+                            Console.WriteLine($"\n{"Mã SP",-8} {"Tên sản phẩm",-30} {"Tồn kho",-10}");
+                            Console.WriteLine(new string('-', 50));
+                            foreach (var sp in menu.inventory)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine($"{sp.ProductId,-8} {sp.Name,-30} {sp.StockQty,-10}");
+                                Console.ResetColor();
+                            }
+
+                            // B2: Nhập ID sản phẩm
+                            Console.Write("\n👉 Nhập mã sản phẩm cần cập nhật: ");
+                            string productID1 = Console.ReadLine();
+                            var product1 = menu.GetById(productID1);
+
+                            if (product1 == null)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("❌ Không tìm thấy sản phẩm với mã này!");
+                                Console.ResetColor();
+                                Console.ReadKey();
+                                break;
+                            }
+
+                            // B3: Nhập số lượng thay đổi
+                            Console.Write($"📥 Nhập số lượng thay đổi cho [{product1.Name}]: ");
+                            int changeAmount;
+                            if (!int.TryParse(Console.ReadLine(), out changeAmount))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("❌ Số lượng không hợp lệ!");
+                                Console.ResetColor();
+                                Console.ReadKey();
+                                break;
+                            }
+                            _InService.ReStock(productID1, changeAmount);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Cập nhật thành công!!");
+                            Console.ResetColor();
+                            Console.ReadKey();
+                            break;
+                        case (7):
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine("=== 📜 LỊCH SỬ HÓA ĐƠN ===");
+                            Console.ResetColor();
+
+                            _TranService.PrintAll();
+
+                            Console.ForegroundColor = ConsoleColor.DarkBlue;
+                            Console.WriteLine("\n👉 Nhấn phím bất kỳ để quay lại menu...");
+                            Console.ResetColor();
+                            Console.ReadKey();
+                            break;
+                        case (8):
+                            return;
                         default:
                             break;
                     }
